@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background: url("images/black_abstarct.jpg");
+    background-size: cover;
+}
+/*nav bar */
+.navbar{
+    
+    position: fixed;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px 0px;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0px 0px;
+    margin: 8px  40px;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a{
+    color:whitesmoke;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: crimson;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline;
+}
+
+.navbar .menu li a{
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: crimson;
+}
+
+/*menu button styling*/
+.menu-btn{
+    color: whitesmoke;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/*main content*/
+
+.topic{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0px 20px;
+
+}
+
+.topic-border{
+    border-width: 5px;
+    border-style: solid;
+    border-color: crimson;
+    border-radius: 20px 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.module{
+        margin: 20px 20px !important;
+        padding: 1rem;
+        color: white;
+        border-width: 3px;
+        border-style: solid;
+        border-image: 
+          linear-gradient(
+            to bottom, 
+            red, 
+            rgba(0, 0, 0, 0)
+          ) 1 100%;
+}
+
+.value{
+    padding-top: 10px; ;
+}
+
+.main{
+    font-family: 'Ubuntu' !important;
+    font-size: 30px;
+}
+
+.value{
+    font-family: 'Ubuntu';
+    font-size: 14px;
+}
+
+.main-box{
+    display:flex;
+    font-size:60px;
+    width: 100%;
+    justify-content: center;
+}
+
+.fa{
+    color:rgb(187, 187, 187);
+     padding: 20px;
+     transition: ease-out 200ms;
+
+}
+
+.main-box .fa:hover{
+    font-size: 70px;
+}
+
+
+
+/*media queries*/
+@media(max-width: 900px){
+    .max-width{
+        margin: 0px  20px;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        right: -100%;
+        top: 0;
+        background: rgb(32, 32, 32);
+        text-align: center;
+        padding-top: 40px;
+        transition: all 300ms ease-in-out ;
+        z-index: 10;
+    }
+
+    .navbar .menu.active{
+        right :0;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .menu-btn{
+        display: block;
+        z-index: 10;
+    }
+}
