@@ -69,7 +69,13 @@
     background: url("images/Desktop\ -\ 1.jpg") no-repeat center;
     color: whitesmoke;
     min-height: 500px;
+    background-size: cover;
     font-family: 'Ubuntu', sans-serif;
+}
+@media screen and (min-width:450px){
+    .home{
+        background-position: top right;
+    }
 }
 
 .home .max-width{
